@@ -11,4 +11,15 @@ import scrapy
 class LianjiaspiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    title = scrapy.Field()
+    community = scrapy.Field()
+    model = scrapy.Field()
+    area = scrapy.Field()
+    focus_num = scrapy.Field()
+    watch_num = scrapy.Field()
+    time = scrapy.Field()
+    price = scrapy.Field()
+    average_price = scrapy.Field()
+    link = scrapy.Field()
+    Latitude = scrapy.Field()
+    city = scrapy.Field()
