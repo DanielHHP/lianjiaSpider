@@ -8,7 +8,7 @@
 import scrapy
 
 
-class LianjiaspiderItem(scrapy.Item):
+class DealItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     title = scrapy.Field()
