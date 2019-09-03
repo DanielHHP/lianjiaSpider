@@ -3,7 +3,7 @@
 ## 运维
 
 ```shell
-scrapy crawl lianjiadealspider
+scrapy crawl lianjiadealspider -a communityid=c1111027376953
 ```
 
 ## 教程
