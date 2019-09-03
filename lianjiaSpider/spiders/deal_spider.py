@@ -39,7 +39,6 @@ class LianjiaDealSpider(scrapy.Spider):
         for info in response.css('div.info'):
             # 详情页
             yield scrapy.Request(url=info.css('div.title a').attrib['href'], callback=self.parse_detail)
-            break
 
         page_attrib = response.css('div.house-lst-page-box').attrib
         page_data = json.loads(page_attrib['page-data'])
