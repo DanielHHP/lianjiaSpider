@@ -7,7 +7,7 @@
 ## 运维
 
 ```shell
-scrapy crawl lianjiadealspider -a communityid=c1111027376953
+scrapy crawl lianjiadealspider -a communityid=c1111027376953 -a pagelimit=1
 ```
 
 ## 教程

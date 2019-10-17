@@ -25,9 +25,11 @@ LABEL_MAPPING = {
 class LianjiaDealSpider(scrapy.Spider):
     name = 'lianjiadealspider'
     deal_url = 'https://bj.lianjia.com/chengjiao/'
+    page_limit = 0
 
     def start_requests(self):
         start_community_id = getattr(self, 'communityid', None)
+        self.page_limit = int(getattr(self, 'pagelimit', 0))
         if start_community_id is None:
             self.logger.error('start community id not defined')
             return
@@ -46,7 +48,9 @@ class LianjiaDealSpider(scrapy.Spider):
         cur_page = page_data['curPage']
         page_url = page_attrib['page-url']
         next_page = cur_page + 1
-        if next_page <= total_page:
+        if self.page_limit > 0 and cur_page > self.page_limit:
+            self.logger.info('Navigate to limit page %s stop', self.page_limit)
+        elif next_page <= total_page:
             self.logger.info('Navigate to page num %s', next_page)
             page_url = page_url.replace('{page}', str(next_page))
             yield response.follow(page_url, callback=self.parse)
