@@ -33,3 +33,9 @@ https://www.jianshu.com/p/f426478b99c4
 https://zhuanlan.zhihu.com/p/25240050
 
 https://python.ctolib.com/sunrise10-lianjia.html
+
+# 数据分析要回答的问题
+
+1. 小区都有哪些户型和朝向，年代如何？用于选择意向户型
+2. 小区成交活跃的户型和朝向是哪种？用于考虑未来流动性
+3. 意向户型锚定价格是多少？挂牌价和成交价近几年的gap如何？用于谈判时的价格策略
