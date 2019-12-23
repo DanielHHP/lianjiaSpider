@@ -10,6 +10,12 @@
 scrapy crawl lianjiadealspider -a communityid=c1111027376953 -a pagelimit=1
 ```
 
+AHP决策分析
+
+```shell
+python -m pyahp -f district_decision.json
+```
+
 ## 教程
 
 [scrapy教程](https://www.runoob.com/w3cnote/scrapy-detail.html)
